@@ -1,0 +1,79 @@
+/**
+* Fonts
+*/
+@font-face {
+  font-family: 'kaushan_scriptregular';
+  src: url('../fonts/kaushanscript-regular-webfont.woff2') format('woff2'),
+    url('../fonts/kaushanscript-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$primary-font-family: 'Lato', sans-serif;
+$secondary-font-family: 'kaushan_scriptregular', sans-serif;
+
+/* Kaushan Script Regular */
+@mixin font-secondary {
+  font-family: $secondary-font-family;
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Lato */
+@mixin font-thin {
+  font-weight: 100;
+  font-style: normal;
+}
+
+@mixin font-thin-italic {
+  font-weight: 100;
+  font-style: italic;
+}
+
+@mixin font-light {
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin font-light-italic {
+  font-weight: 300;
+  font-style: italic;
+}
+
+@mixin font-regular {
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-regular-italic {
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin font-normal {
+  @include font-regular;
+}
+
+@mixin font-normal-italic {
+  @include font-regular-italic;
+}
+
+@mixin font-bold {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-bold-italic {
+  font-weight: 700;
+  font-style: italic;
+}
+
+@mixin font-black {
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin font-black-italic {
+  font-weight: 900;
+  font-style: italic;
+}

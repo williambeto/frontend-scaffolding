@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/**
+ * variables
+ */
+@import "settings/variables";
+
+/**
+ * Functions, mixins etc.
+ */
+@import "tools/functions";
+@import "tools/mixins";
+
+/**
+ * Vendors
+ */
+@import 'vendors/magnific-popup';
+@import 'vendors/owl-carousel';
+@import 'vendors/font-awesome';
+@import 'vendors/datepicker';
+
+/**
+ * Base / Generic
+ */
+@import 'base/fonts';
+@import 'base/typography';
+
+/**
+ * Elements
+ */
+@import 'elements/header';
+@import 'elements/logo';
+@import 'elements/primary-menu';
+@import 'elements/footer';
+@import 'elements/home-slider';
+
+/**
+ * Pages
+ */
+@import 'pages/template';
+
+/**
+ * Components
+ */
+@import 'components/toast-notifications';

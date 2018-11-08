@@ -1,0 +1,238 @@
+////////////////////////
+//      Settings      //
+////////////////////////
+
+// overlay
+$mfp-overlay-color:                   #0b0b0b !default;                    // Color of overlay screen
+$mfp-overlay-opacity:                 0.8 !default;                        // Opacity of overlay screen
+$mfp-shadow:                          0 0 8px rgba(0, 0, 0, 0.6) !default; // Shadow on image or iframe
+
+// spacing
+$mfp-popup-padding-left:              8px !default;                        // Padding from left and from right side
+$mfp-popup-padding-left-mobile:       6px !default;                        // Same as above, but is applied when width of window is less than 800px
+
+$mfp-z-index-base:                    1040 !default;                       // Base z-index of popup
+
+// controls
+$mfp-include-arrows:                  true !default;                       // Include styles for nav arrows
+$mfp-controls-opacity:                0.65 !default;                       // Opacity of controls
+$mfp-controls-color:                  #FFF !default;                       // Color of controls
+$mfp-controls-border-color:           #3F3F3F !default; 	                 // Border color of controls
+$mfp-inner-close-icon-color:          #333 !default;                       // Color of close button when inside
+$mfp-controls-text-color:             #CCC !default;                       // Color of preloader and "1 of X" indicator
+$mfp-controls-text-color-hover:       #FFF !default;                       // Hover color of preloader and "1 of X" indicator
+
+// Iframe-type options
+$mfp-include-iframe-type:             true !default;                       // Enable Iframe-type popups
+$mfp-iframe-padding-top:              40px !default;                       // Iframe padding top
+$mfp-iframe-background:               #000 !default;                       // Background color of iframes
+$mfp-iframe-max-width:                900px !default;                      // Maximum width of iframes
+$mfp-iframe-ratio:                    9/16 !default;                       // Ratio of iframe (9/16 = widescreen, 3/4 = standard, etc.)
+
+// Image-type options
+$mfp-include-image-type:              true !default;                       // Enable Image-type popups
+$mfp-image-background:                #444 !default;
+$mfp-image-padding-top:               50px !default;                       // Image padding top
+$mfp-image-padding-bottom:            40px !default;                       // Image padding bottom
+$mfp-include-mobile-layout-for-image: true !default;                       // Removes paddings from top and bottom
+
+// Image caption options
+$mfp-caption-title-color:             #F3F3F3 !default;                    // Caption title color
+$mfp-caption-subtitle-color:          #BDBDBD !default;                    // Caption subtitle color
+
+// A11y
+$mfp-use-visuallyhidden:              false !default;                      // Hide content from browsers, but make it available for screen readers
+
+@import 'main';
+
+
+/*--------------------lightbox enhancements---------------*/
+/* 
+.mfp-figure - container that holds image and caption
+.mfp-bg     - black overlay
+.mfp-preloader - "Loading..." incdicator
+*/
+.mfp-ready .mfp-figure {
+  opacity: 0;
+}
+
+div .mfp-title{
+
+}
+
+.mfp-title a{ text-decoration: underline; color:#fff;}
+.mfp-title a:hover{ text-decoration: none; opacity: 0.8;}
+
+.mfp-zoom-in .mfp-figure, 
+.mfp-zoom-in .mfp-iframe-holder .mfp-iframe-scaler{
+  opacity: 0;
+  transition: all 0.3s ease-out;
+  transform: scale(0.95);
+}
+
+.mfp-zoom-in.mfp-bg,
+.mfp-zoom-in .mfp-preloader {
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+.mfp-zoom-in.mfp-image-loaded .mfp-figure, 
+.mfp-zoom-in.mfp-ready .mfp-iframe-holder .mfp-iframe-scaler{
+  opacity: 1;
+  transform: scale(1);
+}
+
+.mfp-zoom-in.mfp-ready.mfp-bg,
+.mfp-zoom-in.mfp-ready .mfp-preloader {
+  opacity: 0.8;
+}
+
+.mfp-zoom-in.mfp-removing .mfp-figure, 
+.mfp-zoom-in.mfp-removing .mfp-iframe-holder .mfp-iframe-scaler{
+  transform: scale(0.95);
+  opacity: 0;
+}
+
+.mfp-zoom-in.mfp-removing.mfp-bg,
+.mfp-zoom-in.mfp-removing .mfp-preloader {
+  opacity: 0;
+}
+
+div.avia-popup .mfp-iframe-scaler{ overflow: visible;}
+div.avia-popup .mfp-zoom-out-cur { cursor: auto; }
+div.avia-popup .mfp-zoom-out-cur .mfp-image-holder .mfp-close { cursor: pointer; }
+
+div.avia-popup .mfp-close {
+  color: #fff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  border: 2px solid transparent;    
+  padding: 0;
+  transition: all 0.3s ease-out;
+  font-size: inherit;
+  right: 20px;
+  top: 5px;
+  cursor: pointer;
+  display: block;
+
+  @include breakpoint(large){
+  }
+
+  .fa{
+    @include absolute-center;
+  }
+}
+
+div.avia-popup .mfp-close:hover{ 
+  border: 2px solid #fff; 
+  transform: scale(0.8) rotateZ(90deg);
+}
+
+div.avia-popup .mfp-iframe-scaler .mfp-close{
+  right: 20px;
+  top: -45px;
+}
+
+div.avia-popup .mfp-figure:after{box-shadow: none; display: none;}
+
+div.avia-popup button.mfp-arrow:before, 
+div.avia-popup button.mfp-arrow:after{border:none; margin:0; display:none;}
+div.avia-popup button.mfp-arrow:before{ 
+  opacity:1; 
+  display:block; 
+  position: absolute; 
+  top:50%; 
+  left:0; 
+  width:100%; 
+  height:80px; 
+  line-height:80px; 
+  margin-top:-40px; 
+  color:#fff; 
+  -webkit-font-smoothing: antialiased; 
+  -moz-osx-font-smoothing: grayscale; 
+  font-weight: normal;
+  -webkit-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  -webkit-transform: scale(1,1);
+  transform: scale(1,1);
+  font-size: 50px;
+
+  @include breakpoint(medium){
+    font-size: 80px;
+  }
+
+  @include breakpoint(xlarge){
+    font-size: 100px;
+  }
+
+}
+
+div.avia-popup button.mfp-arrow:hover:before{-webkit-transform: scale(0.8,0.8); transform: scale(0.8,0.8);}
+div.avia-popup button.mfp-arrow:before		{ content: "\f105"; font-family: 'Font Awesome 5 Free'; font-style: normal; font-weight: 900; }
+div.avia-popup button.mfp-arrow-left:before { content: "\f104"; font-family: 'Font Awesome 5 Free'; font-style: normal; font-weight: 900; }
+
+.mfp-img{
+  -webkit-animation: avia-fadein 0.7s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); /* Safari 4+ */
+  animation:         avia-fadein 0.7s 1 cubic-bezier(0.175, 0.885, 0.320, 1.275); /* IE 10+ */
+}
+
+
+/* CSS-based preloader */
+div.avia-popup .mfp-preloader {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background-color: $brand-color;
+  opacity: 1;
+  margin: 0 auto;
+  -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+  animation: rotateplane 1.2s infinite ease-in-out;
+  border-radius: 50%;
+}
+
+div.avia-popup .mfp-s-error .mfp-preloader {
+  background: transparent; width:100%; -webkit-animation: none; animation: none; white-space: nowrap;}
+
+
+@-webkit-keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+@keyframes rotateplane {
+  0% {
+    -webkit-transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+
+  50% {
+    -webkit-transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
+  }
+
+  100% {
+    -webkit-transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
+  }
+}
+
+
+@media (max-width: 900px){
+  .mfp-arrow {
+    text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  }
+}
