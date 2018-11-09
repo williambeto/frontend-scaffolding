@@ -32,9 +32,52 @@
         <div class="large-8 cell">
           <h2 class="section-title">Section title</h2>
           <article class="content">
-            <p>
-              <img src="https://picsum.photos/780/350/?image=0" alt="">
-            </p>
+            <h6>cropper on the fly</h6>
+            
+            <div data-cropper data-cropper-width="320" data-cropper-height="150">
+              <img src="https://picsum.photos/1920/1080/?image=800" alt="">
+            </div>
+            
+            <div data-cropper>
+              <img src="https://picsum.photos/1920/1080/?image=800" alt="">
+            </div>
+            
+            
+            
+            
+            <hr>
+            
+            <h6>ratio-4-by-3</h6>
+            <div class="ratio-buddy ratio-4-by-3">
+              <div class="cover-image" style="background-image: url(https://picsum.photos/1920/1080/?image=800);"></div>
+            </div>
+            
+            <h6>ratio-2-by-3</h6>
+            <div class="ratio-buddy ratio-2-by-3">
+              <div class="cover-image" style="background-image: url(https://picsum.photos/1920/1080/?image=800);"></div>
+            </div>
+            
+            <h6>panorama</h6>
+            <div class="ratio-buddy panorama">
+              <div class="cover-image" style="background-image: url(https://picsum.photos/1920/1080/?image=800);"></div>
+            </div>
+            
+            <h6>widescreen</h6>
+            <div class="ratio-buddy widescreen">
+              <div class="cover-image" style="background-image: url(https://picsum.photos/1920/1080/?image=800);"></div>
+            </div>
+            
+            <h6>square</h6>
+            <div class="ratio-buddy square">
+              <div class="cover-image" style="background-image: url(https://picsum.photos/1920/1080/?image=800);"></div>
+            </div>
+            
+            <hr>
+            <h6>Original</h6>
+            <div>
+              <img src="https://picsum.photos/1920/1080/?image=800" alt="">
+            </div>
+            
             <p>
               Desta maneira, a necessidade de renovação processual maximiza as possibilidades por conta do fluxo de informações. Gostaria de enfatizar que o consenso sobre a necessidade de qualificação obstaculiza a apreciação da importância das novas proposições. O incentivo ao avanço tecnológico, assim como o aumento do diálogo entre os diferentes setores produtivos auxilia a preparação e a composição dos paradigmas corporativos. 
             </p>

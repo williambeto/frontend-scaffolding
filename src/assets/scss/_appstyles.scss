@@ -18,6 +18,7 @@
 @import 'vendors/owl-carousel';
 @import 'vendors/font-awesome';
 @import 'vendors/datepicker';
+@import 'vendors/jquery-cropper';
 
 /**
  * Base / Generic
@@ -43,3 +44,4 @@
  * Components
  */
 @import 'components/toast-notifications';
+@import 'components/ratiobuddy';

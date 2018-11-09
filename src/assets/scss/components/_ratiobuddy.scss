@@ -1,0 +1,64 @@
+/**
+* RatioBuddy - Aspect ratio calculator
+*/
+
+.ratio-buddy {
+  position: relative;
+  overflow: hidden;
+  margin-bottom:rem-calc(30);
+  &:before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: (9 / 16) * 100%;
+  }
+
+  img {
+    max-width: 100%; /* This rule is very important, please do not ignore this! */
+  }
+  
+  &.widescreen:before{
+    padding-top: (9 / 16) * 100%;
+  }
+
+  &.square:before{
+    padding-top: (1 / 1) * 100%;
+  }
+
+  &.panorama:before{
+    padding-top: (81 / 256) * 100%;
+  }
+
+  &.ratio-2-by-3:before{
+    padding-top: (3 / 2) * 100%;
+  }
+
+  &.ratio-4-by-3:before{
+    padding-top: (3 / 4) * 100%;
+  }
+
+  .cover-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: opacity 1s cubic-bezier(0.23, 1, 0.32, 1) 0s, transform 0.35s ease 0s;
+  }
+
+
+  > .inner, 
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

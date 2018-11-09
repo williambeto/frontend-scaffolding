@@ -27,3 +27,4 @@ import './behaviors/maskedinput';
 import './behaviors/carousel-init';
 import './behaviors/magnificPopupInit';
 import './behaviors/datepicker';
+import './behaviors/image-cropper';
