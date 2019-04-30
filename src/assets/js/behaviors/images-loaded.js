@@ -6,7 +6,7 @@ $(window).on("load", function () {
   const $elementsToTrigger = $([$body, $interchange]);
 
   $elementsToTrigger.each(function (index, element) {
-    $(element).imagesLoaded({background: '[data-interchange]'})
+    $(element).imagesLoaded({background: true})
             .always(function (instance) {
               //console.log('all images loaded');
             })

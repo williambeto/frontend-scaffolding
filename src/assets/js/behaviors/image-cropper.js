@@ -1,8 +1,15 @@
 import 'cropperjs';
 import 'jquery-cropper';
-$(window).on("load", function () {
-  const $elementsToCropper = $('[data-cropper]');
 
+$(window).on("load", function () {
+
+  'use strict';
+  const $elementsToCropper = $('[data-cropper]');
+  if (!$elementsToCropper.length) {
+    console.log('return');
+    return;
+  }
+  
   $elementsToCropper.each(function (index, element) {
     let defaultImgWidth = (typeof $(element).data('cropper-width') === "undefined") ? 780 : $(element).data('cropper-width');
     let defaultImgHeight = (typeof $(element).data('cropper-height') === "undefined") ? 350 : $(element).data('cropper-height');
@@ -20,9 +27,13 @@ $(window).on("load", function () {
     };
 
     let $image = $(element).find('img');
+
+    if ($image) {
+
+    }
     /* the Cropper */
     $image.cropper({
-      autoCropArea:1,
+      autoCropArea: 1,
       aspectRatio: defaultImgWidth / defaultImgHeight,
       viewMode: 3,
       guides: false,
@@ -30,8 +41,8 @@ $(window).on("load", function () {
       dragMode: 'none',
       highlight: false,
       cropBoxResizable: false,
-      cropBoxMovable:false,
-      movable:false,
+      cropBoxMovable: false,
+      movable: false,
       ready: function (event) {
         const canvas = $image.cropper('getCroppedCanvas', croppedCanvasOptions);
         const croppedImageDataURL = canvas.toDataURL("image/jpeg");
@@ -44,5 +55,6 @@ $(window).on("load", function () {
       }
     });
   });
+
 });
 

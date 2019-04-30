@@ -13,7 +13,6 @@ function requireAll(r) {
 import whatInput from 'what-input';
 
 // Foundation
-// import Foundation from 'foundation-sites';
 const Foundation = require('foundation-sites');
 
 // If you want to pick and choose which modules to include, comment out the above and uncomment the line below
@@ -28,3 +27,4 @@ import './behaviors/carousel-init';
 import './behaviors/magnificPopupInit';
 import './behaviors/datepicker';
 import './behaviors/image-cropper';
+// import './behaviors/modernizr-init';
