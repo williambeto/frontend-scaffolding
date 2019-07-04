@@ -98,7 +98,7 @@ function sass() {
           })
                   .on('error', $.sass.logError))
           .pipe($.autoprefixer({
-            browsers: COMPATIBILITY
+            overrideBrowserslist: COMPATIBILITY
           }))
 
           .pipe($.cleanCss({

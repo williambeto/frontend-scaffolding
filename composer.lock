@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "b20f7b252cd6765ee68e66f8b3093a230ad97608"
+                "reference": "4aa453ad54f76c4db02b6ad3574e17795c51fb23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/b20f7b252cd6765ee68e66f8b3093a230ad97608",
-                "reference": "b20f7b252cd6765ee68e66f8b3093a230ad97608",
+                "url": "https://api.github.com/repos/composer/installers/zipball/4aa453ad54f76c4db02b6ad3574e17795c51fb23",
+                "reference": "4aa453ad54f76c4db02b6ad3574e17795c51fb23",
                 "shasum": ""
             },
             "require": {
@@ -125,7 +125,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2018-10-10T11:17:18+00:00"
+            "time": "2019-05-15T06:46:42+00:00"
         },
         {
             "name": "jbzoo/data",
@@ -198,12 +198,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/JBZoo/Utils.git",
-                "reference": "4fe88ce4fe9e2b6259526afe5a3ede4815a73dad"
+                "reference": "63de09eedaf8fa606003236553078fcf5ca8d48d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JBZoo/Utils/zipball/4fe88ce4fe9e2b6259526afe5a3ede4815a73dad",
-                "reference": "4fe88ce4fe9e2b6259526afe5a3ede4815a73dad",
+                "url": "https://api.github.com/repos/JBZoo/Utils/zipball/63de09eedaf8fa606003236553078fcf5ca8d48d",
+                "reference": "63de09eedaf8fa606003236553078fcf5ca8d48d",
                 "shasum": ""
             },
             "require": {
@@ -281,7 +281,7 @@
                 "utility",
                 "utils"
             ],
-            "time": "2018-12-03T09:58:53+00:00"
+            "time": "2019-06-26T11:19:29+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
