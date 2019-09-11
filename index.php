@@ -42,9 +42,7 @@
               <img src="https://picsum.photos/1920/1080/?image=800" alt="">
             </div>
             
-            
-            
-            
+          
             <hr>
             
             <h6>ratio-4-by-3</h6>

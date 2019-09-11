@@ -27,4 +27,4 @@ import './behaviors/carousel-init';
 import './behaviors/magnificPopupInit';
 import './behaviors/datepicker';
 import './behaviors/image-cropper';
-// import './behaviors/modernizr-init';
+import './behaviors/modernizr-init_1';

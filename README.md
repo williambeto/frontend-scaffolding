@@ -1,2 +1,2 @@
 # frontend-scaffolding
-Generic front-end scaffolding for most web projects
+Front-end scaffolding com foundation, webpack e composer

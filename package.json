@@ -1,9 +1,9 @@
 {
-   "name": "project-name",
-   "title": "project name",
+   "name": "front-end-scaffolding",
+   "title": "Front-end scaffolding com foundation, webpack e composer",
    "version": "1.0.0",
-   "description": "Static starter base project based on Foundation 6",
-   "homepage": "https://williambeto@bitbucket.org/neurateam/scaffolding-front-end.git",
+   "description": "Front-end scaffolding com foundation, webpack e composer",
+   "homepage": "https://github.com/williambeto/frontend-scaffolding",
    "license": "MIT",
    "main": "gulpfile.babel.js",
    "scripts": {
@@ -20,11 +20,11 @@
       "responsive"
    ],
    "engines": {
-      "composer": "1.8.6"
+      "composer": "1.9.0"
    },
    "dependencies": {
-      "@fortawesome/fontawesome-free": "^5.9.0",
-      "cropperjs": "^1.5.2",
+      "@fortawesome/fontawesome-free": "^5.10.2",
+      "cropperjs": "^1.5.5",
       "foundation-datepicker": "^1.5.6",
       "foundation-sites": "^6.5.3",
       "imagesloaded": "^4.1.4",
@@ -34,30 +34,31 @@
       "jquery-bridget": "^2.0.1",
       "jquery-cropper": "^1.0.0",
       "jquery.maskedinput": "^1.4.1",
+      "lodash": "^4.17.15",
       "magnific-popup": "^1.1.0",
       "motion-ui": "^2.0.3",
       "owl.carousel": "^2.3.4",
       "what-input": "^5.2.3"
    },
    "devDependencies": {
-      "@babel/core": "^7.5.0",
-      "@babel/preset-env": "^7.5.0",
-      "@babel/register": "^7.4.4",
+      "@babel/core": "^7.6.0",
+      "@babel/preset-env": "^7.6.0",
+      "@babel/register": "^7.6.0",
       "ansi-colors": "^4.1.1",
       "babel-loader": "^8.0.6",
       "browser-sync": "^2.26.7",
       "dateformat": "^3.0.3",
       "fancy-log": "^1.3.3",
       "gulp": "^4.0.2",
-      "gulp-autoprefixer": "^6.1.0",
+      "gulp-autoprefixer": "^7.0.0",
       "gulp-babel": "^8.0.0",
       "gulp-clean-css": "^4.2.0",
       "gulp-cli": "^2.2.0",
       "gulp-concat": "^2.6.1",
       "gulp-extname": "^0.2.2",
-      "gulp-if": "^2.0.2",
-      "gulp-imagemin": "^6.0.0",
-      "gulp-load-plugins": "^2.0.0",
+      "gulp-if": "^3.0.0",
+      "gulp-imagemin": "^6.1.0",
+      "gulp-load-plugins": "^2.0.1",
       "gulp-rename": "^1.4.0",
       "gulp-rev": "^9.0.0",
       "gulp-sass": "^4.0.2",
@@ -69,16 +70,16 @@
       "json-loader": "^0.5.7",
       "modernizr": "^3.7.1",
       "modernizr-loader": "^1.0.1",
-      "node-composer-runner": "^0.3.0",
-      "rimraf": "^2.6.3",
-      "terser-webpack-plugin": "^1.3.0",
+      "node-composer-runner": "^0.4.0",
+      "rimraf": "^3.0.0",
+      "terser-webpack-plugin": "^2.0.1",
       "vinyl-named": "^1.1.0",
-      "webpack": "^4.35.2",
+      "webpack": "^4.39.3",
       "webpack-stream": "^5.2.1",
-      "yargs": "^13.2.4"
+      "yargs": "^14.0.0"
    },
    "repository": {
       "type": "git",
-      "url": "https://williambeto@bitbucket.org/neurateam/scaffolding-front-end.git"
+      "url": "https://github.com/williambeto/frontend-scaffolding.git"
    }
 }
