@@ -160,13 +160,19 @@ const webpack = {
     },
     mode: 'production',
     optimization: {
+      minimize: true,
       minimizer: [
         new TerserPlugin({
+          extractComments: false,
+          cache: false,
+          parallel: true,
           terserOptions: {
             warnings: false,
             mangle: true,
             module: false,
-            output: null,
+            output: {
+              comments: false
+            },
             toplevel: false,
             nameCache: null,
             ie8: false,
@@ -183,7 +189,7 @@ const webpack = {
         minSize: 0, // enforce all
         cacheGroups: {
           commons: {
-            test: /(node_modules|bower_components)/,
+            test: /[\\/]node_modules[\\/]/,
             name: "vendors",
             chunks: "all"
           }
